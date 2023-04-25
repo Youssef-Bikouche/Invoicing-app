@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="x5">
+    <tr id="tr-head">
+      <th>Item</th>
+      <th>Unit cost</th>
+      <th>Quantity</th>
+      <th>Line total</th>
+      <th></th>
+   </tr>
+   <tr>
+      <td id="item" ><input class="item" type="text"></td>
+      <td id="unitCost"><input type="text"></td>
+      <td id="quantity"><input type="text"></td>
+      <td id="lineTotal"><input type="text" disabled="disabled" value="480"></td>
+      <td id="remove"><button id="deleteRow"> <img src="../icons/remove-icone.png" alt="" style="width:10px ;"> </button></td>
+   </tr>
+    <button class="x">Generate PDF</button>
+  </div>
+ 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+ <script src="/javascript/GeneratePdf.js"></script>
+</body>
+</html>

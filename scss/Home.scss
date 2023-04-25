@@ -1,0 +1,168 @@
+@import "breakpoints";
+@import "mixins";
+
+.main{
+  @include sizeKit();
+  @include flexKit("center");
+  
+  .left{
+    @include sizeKit(45%);
+    @include positionkit();
+    background-color: black;
+    div{
+      @include sizeKit(80%,80%);
+      @include positionkit(absolute,50%,50%);
+      transform: translate(-50%,-50%);
+      video{
+        @include sizeKit(100%,100%);
+      }
+    }
+    @include media("<=tablet"){
+      display: none;
+      div{
+        display: none;
+        video{
+          display: none;
+        }
+      }
+    }
+  }
+  .right{
+    @include backgroundKit();
+    background: linear-gradient(rgba(0,0,0,0.10),rgba(0,0,0,0.10)),url(/images/x6.jpg);
+    padding: 1rem;
+    @include sizeKit(55%);
+    @include flexKit(none);
+    flex-direction: column;
+    .title{
+      @include fontKit(medium,italic);
+      margin-top: 2rem;
+    }
+    .option1,.option2{
+      @include sizeKit(100%,35%);
+      @include flexKit(space-evenly);
+      margin: 60px 0 0 0;
+      transition: box-shadow 0.5s ease, transform 0.5s ease;
+      
+      &:hover{
+        box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.8);
+        transform: translateY(-25px);
+        @include borderkit(0,none,16px);
+        .optionInfo{
+          box-shadow: inset 300px 0 10px 10px rgba(0, 0, 0, 0.706);
+          color: white
+        }
+      }
+      .optionInfo{
+        cursor: pointer;
+        transition: box-shadow 0.7s,color 0.7s;
+        @include sizeKit(28%,90%);
+        @include borderkit(0,none,16px);
+        @include fontKit(larger,italic);
+        @include flexKit();
+        text-align: center;
+      }
+      .optionPic1,.optionPic2{
+        @include borderkit(1px,black,16px);
+        cursor: pointer;
+        @include sizeKit(68%,90%);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+      }
+      .optionPic1{
+        background: linear-gradient(rgba(0,0,0,0.10),rgba(0,0,0,0.10)),url(/images/x.jpg);
+        @include backgroundKit(none);
+      }
+      .optionPic2{
+        background: linear-gradient(rgba(0,0,0,0.10),rgba(0,0,0,0.10)),url(/images/x2.jpg);
+        @include backgroundKit(none);
+      }
+    }
+    @include media("<=tablet"){
+      @include sizeKit(100%)
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .header{
+//   width: 100%;
+//   @include positionkit("fixed");
+//   @include flexKit();
+//   // @include borderkit(6px,red,12px);
+//   background-color: white;
+//   height: 20vh;
+//   text-align: center;
+//   color: black;
+//   @include media("<=tablet"){
+//   background-color: orangered;
+//   }
+  
+// }
+//  .main-container{
+//   width: 100%;
+//   height: 80vh;
+//   padding: 2rem;
+//   @include flexKit(space-around);
+//   // @include borderkit(6px,blue,12px);
+//     .option1,.option2{
+//         width: 20%;
+//         height: 300px;
+//         margin: 10px;
+//         background: url(/images/x.jpg);
+//         @include backgroundKit(none);
+//         @include borderkit(1px,black,10px);
+//         display: block;
+//         cursor: pointer;
+//         position: relative;
+        
+//         &:hover{
+//           box-shadow: 5px 5px 15px 20px rgba(0, 0, 0, 0.623);
+//           transform: scale(1.1);
+//           transition: box-shadow 1s,transform 1s;
+//           &::after{
+//             content: 'Manuel invoicing';
+//             position: absolute;
+//             left: 0;
+//             top: 0;
+//             right: 0;
+//             color: white;
+//             background-color: black;
+//             height: 100%;
+//             transition: height 1s;
+            
+//           }
+//         }
+//     }
+//     .option2{
+//         background: url(/images/x2.jpg);
+//         @include backgroundKit(none);
+//     }
+//   @include media("<=tablet"){
+//     flex-direction: column;
+//     .option1,.option2{
+//       width: 60%;
+//       height: 400px;
+//     }
+//     }
+  
+// }

@@ -1,0 +1,134 @@
+/**
+*
+* Testing
+*
+**/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: "center";
+}
+.main .left {
+  width: 45%;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: black;
+}
+.main .left div {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main .left div video {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .main .left {
+    display: none;
+  }
+  .main .left div {
+    display: none;
+  }
+  .main .left div video {
+    display: none;
+  }
+}
+.main .right {
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+  background-attachment: none;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/images/x6.jpg);
+  padding: 1rem;
+  width: 55%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: none;
+  flex-direction: column;
+}
+.main .right .title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: medium;
+  font-weight: italic;
+  font-style: normal;
+  margin-top: 2rem;
+}
+.main .right .option1, .main .right .option2 {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 60px 0 0 0;
+  transition: box-shadow 0.5s ease, transform 0.5s ease;
+}
+.main .right .option1:hover, .main .right .option2:hover {
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.8);
+  transform: translateY(-25px);
+  border: 0 solid none;
+  border-radius: 16px;
+}
+.main .right .option1:hover .optionInfo, .main .right .option2:hover .optionInfo {
+  box-shadow: inset 300px 0 10px 10px rgba(0, 0, 0, 0.706);
+  color: white;
+}
+.main .right .option1 .optionInfo, .main .right .option2 .optionInfo {
+  cursor: pointer;
+  transition: box-shadow 0.7s, color 0.7s;
+  width: 28%;
+  height: 90%;
+  border: 0 solid none;
+  border-radius: 16px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: larger;
+  font-weight: italic;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.main .right .option1 .optionPic1, .main .right .option1 .optionPic2, .main .right .option2 .optionPic1, .main .right .option2 .optionPic2 {
+  border: 1px solid black;
+  border-radius: 16px;
+  cursor: pointer;
+  width: 68%;
+  height: 90%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.main .right .option1 .optionPic1, .main .right .option2 .optionPic1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/images/x.jpg);
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+  background-attachment: none;
+}
+.main .right .option1 .optionPic2, .main .right .option2 .optionPic2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/images/x2.jpg);
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+  background-attachment: none;
+}
+@media (max-width: 768px) {
+  .main .right {
+    width: 100%;
+    height: 100vh;
+  }
+}/*# sourceMappingURL=Home.css.map */

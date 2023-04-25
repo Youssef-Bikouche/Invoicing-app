@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "include-media": "^2.0.0",
+    "jspdf": "^2.5.1",
+    "nice-invoice": "^1.1.8"
+  }
+}
