@@ -8,7 +8,7 @@
   .left{
     @include sizeKit(45%);
     @include positionkit();
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     div{
       @include sizeKit(80%,80%);
       @include positionkit(absolute,50%,50%);
@@ -38,10 +38,10 @@
       @include fontKit(medium,italic);
       margin-top: 2rem;
     }
-    .option1,.option2{
+    .option1{
       @include sizeKit(100%,35%);
       @include flexKit(space-evenly);
-      margin: 60px 0 0 0;
+      margin: 180px 0 0 0;
       transition: box-shadow 0.5s ease, transform 0.5s ease;
       
       &:hover{
@@ -62,7 +62,7 @@
         @include flexKit();
         text-align: center;
       }
-      .optionPic1,.optionPic2{
+      .optionPic1{
         @include borderkit(1px,black,16px);
         cursor: pointer;
         @include sizeKit(68%,90%);
@@ -70,11 +70,7 @@
         overflow: hidden;
       }
       .optionPic1{
-        background: linear-gradient(rgba(0,0,0,0.10),rgba(0,0,0,0.10)),url(/images/x.jpg);
-        @include backgroundKit(none);
-      }
-      .optionPic2{
-        background: linear-gradient(rgba(0,0,0,0.10),rgba(0,0,0,0.10)),url(/images/x2.jpg);
+        background: linear-gradient(rgba(0,0,0,0.10),rgba(0,0,0,0.10)),url(../images/xxx.jpg);
         @include backgroundKit(none);
       }
     }
